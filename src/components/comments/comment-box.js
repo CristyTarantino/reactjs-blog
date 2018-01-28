@@ -26,7 +26,6 @@ export default class CommentBox extends React.Component {
 
   componentWillMount() {
     this._fetchComments();
-    console.log(this.state);
   }
 
   render() {
