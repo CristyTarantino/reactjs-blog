@@ -15,6 +15,13 @@ export default class CommentBox extends React.Component {
       showComments: false,
       comments: []
     };
+
+    // every time setState is called the render function gets called again
+    // every time we do .bind inline we are making a new reference every time render is called
+    // by doing this we are relying on the garbage collector to get rid of those objects over time
+    // whereas if we pre-bind them we are only using one memory reference
+    this._addComment = this._addComment.bind(this);
+    this._deleteComment = this._deleteComment.bind(this);
   }
 
   componentWillMount() {
@@ -29,7 +36,7 @@ export default class CommentBox extends React.Component {
           <div className="cell">
             <h2>Join The Discussion</h2>
             <div className="comment-box">
-              <CommentForm addComment={this._addComment.bind(this)}/>
+              <CommentForm addComment={this._addComment}/>
               <CommentAvatarList avatars={this._getAvatars()}/>
 
               {this._getPopularMessage(comments.length)}
@@ -60,11 +67,8 @@ export default class CommentBox extends React.Component {
   _getComments() {
     return this.state.comments.map((comment) => {
       return <Comment
-          id={comment.id}
-          author={comment.author}
-          body={comment.body}
-          avatarUrl={comment.avatarUrl}
-          onDelete={this._deleteComment.bind(this)}
+          {...comment}
+          onDelete={this._deleteComment}
           key={comment.id}/>
     });
   }
