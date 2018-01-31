@@ -1,8 +1,11 @@
 import React from 'react';
 
+import './comment-form.css';
+
 export default class CommentForm extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+
     this.state = {
       characters: 0
     };
@@ -17,11 +20,13 @@ export default class CommentForm extends React.Component {
 
   render() {
     return (
+        //onSubmit call _handleSubmit
         <form className="comment-form" onSubmit={this._handleSubmit}>
           <label>New comment</label>
           <div className="comment-form-fields">
-            <input placeholder="Name:" ref={c => this._author = c} />
-            <textarea placeholder="Comment:" ref={c => this._body = c} onChange={this._getCharacterCount}></textarea>
+            {/* refs allow us to access input data from submit handler. React calls the ref function when it renders the component */}
+            <input placeholder="Name:" ref={input => this._author = input}/>
+            <textarea placeholder="Comment:" ref={textarea => this._body = textarea} onChange={this._getCharacterCount}></textarea>
           </div>
           <p>{this.state.characters} characters</p>
           <div className="comment-form-actions">
@@ -42,13 +47,15 @@ export default class CommentForm extends React.Component {
   }
 
   _handleSubmit(event) {
+    // Make sure page is not reloaded on submit
     event.preventDefault();
 
+    // calls the addComment function in the parent component CommentBox
     this.props.addComment(this._author.value, this._body.value);
 
     this._author.value = '';
     this._body.value = '';
 
-    this.setState({ characters: 0  });
+    this.setState({characters: 0});
   }
 }

@@ -19,6 +19,7 @@ export default class VideoPage extends React.Component {
             </article>
           </div>
 
+          {/* Load the component CommentBox with the required prop apiUrl */}
           <CommentBox apiUrl="api/videos/comments.json" />
         </div>
     )

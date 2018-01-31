@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './comment-avatar-list.css';
+
 export default class CommentAvatarList extends React.Component {
   render() {
 

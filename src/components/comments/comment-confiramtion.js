@@ -1,8 +1,8 @@
 import React from 'react';
 
 export default class CommentConfirmation extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       showConfirm: false
@@ -37,8 +37,8 @@ export default class CommentConfirmation extends React.Component {
     );
   }
 
-  _toggleConfirmMessage(e) {
-    e.preventDefault();
+  _toggleConfirmMessage(event) {
+    event.preventDefault();
 
     this.setState({
       showConfirm: !this.state.showConfirm
@@ -46,8 +46,9 @@ export default class CommentConfirmation extends React.Component {
 
   }
 
-  _confirmDelete(e) {
-    e.preventDefault();
+  _confirmDelete(event) {
+    event.preventDefault();
+    // call the comment component onDelete prop
     this.props.onDelete();
   }
 }

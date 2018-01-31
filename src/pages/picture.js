@@ -17,6 +17,7 @@ export default class PicturePage extends React.Component {
             </article>
           </div>
 
+          {/* Load the component CommentBox with the required prop apiUrl */}
           <CommentBox apiUrl="api/pictures/comments.json" />
         </div>
     )
