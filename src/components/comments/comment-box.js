@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import axios from 'axios';
 
@@ -98,7 +99,7 @@ export default class CommentBox extends React.Component {
   }
 
   _fetchComments() {
-    axios.get('comments.json')
+    axios.get(this.props.apiUrl)
         .then(response => {
           const comments = response.data;
           this.setState({comments});
@@ -113,3 +114,7 @@ export default class CommentBox extends React.Component {
     this.setState({comments});
   }
 }
+
+CommentBox.propTypes = {
+  apiUrl: PropTypes.string.isRequired
+};
