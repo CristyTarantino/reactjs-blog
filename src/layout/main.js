@@ -1,5 +1,5 @@
 import React from 'react';
-import {Switch, Route} from 'react-router-dom';
+import {Switch, Route, Redirect} from 'react-router-dom';
 
 import BlogPage from '../pages/blog';
 import PicturePage from '../pages/picture';
@@ -10,6 +10,7 @@ export default class Main extends React.Component {
     return (
         <main>
           <Switch>
+            <Redirect from='/blog' to='/'/>
             <Route exact path="/" component={BlogPage} />
             <Route path="/picture" component={PicturePage} />
             <Route path="/video" component={VideoPage} />
