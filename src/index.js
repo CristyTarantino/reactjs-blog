@@ -2,7 +2,6 @@ import React from 'react';
 
 // This tells Javascript that we want the ReactDOM library out of the ‘react-dom’ NPM module.
 import ReactDOM from 'react-dom';
-import {BrowserRouter as Router} from 'react-router-dom';
 
 // This tells Javascript that we want to import the App component from a local file called “App.js”.
 // The “.js” can be left off completely; ES2015 is smart enough to assume that’s where it is coming from.
@@ -28,12 +27,9 @@ import registerServiceWorker from './registerServiceWorker';
   - Which component to render
   - Where to render that component
   - Optional callback
-
  */
 ReactDOM.render(
-    <Router>
-      <App/>
-    </Router>,
+    <App />,
     //The <div id=”root”> bit is the important part: this is where your react application gets rendered in your browser!
     document.getElementById('root'), () => {
       //As this is a demo app I want to observe the app rendering time so I can understand if there are more performing solutions
