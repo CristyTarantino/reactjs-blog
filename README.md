@@ -1,6 +1,6 @@
 # Sample React Blog
 
-This is a sample blog I used to get started with ReactJS.
+This is a sample blog I used to get started with ReactJS. To view the end result visit https://cristytarantino.github.io/ReactBlog.
 
 It shows how to simply use the state, how to fork with forms and really basics ReactJS features.
 
