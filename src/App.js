@@ -31,7 +31,7 @@ export default App
   This allows you to write templates for your components in a way
   that’s very comfortable to developers already familiar with HTML,
   but there are a few extra things that it provides.
-  First, you can embed any javascript inside of a JSX template by wrapping it in curly braces (these: {}).
+  First, you can embed any JavaScript inside of a JSX template by wrapping it in curly braces (these: {}).
   Second, some words are special and reserved, such as class, so there are JSX-specific
   properties/attributes/etc you need to use (such as className).
 
