@@ -16,6 +16,11 @@ import './index.css';
 // allows us access to implementing service workers for progressive web apps in our create react app!
 import registerServiceWorker from './registerServiceWorker';
 
+import { Router } from 'react-router';
+import createHashHistory from 'history/createHashHistory';
+
+const hashHistory = createHashHistory({ basename: process.env.PUBLIC_URL });
+
 /*
   Main Render call from ReactDOM.
   ReactDOM has one function in particular that we want to use: render().
@@ -29,7 +34,9 @@ import registerServiceWorker from './registerServiceWorker';
   - Optional callback
  */
 ReactDOM.render(
-    <App />,
+    <Router history={hashHistory}>
+      <App />
+    </Router>,
     //The <div id=”root”> bit is the important part: this is where your react application gets rendered in your browser!
     document.getElementById('root'), () => {
       //As this is a demo app I want to observe the app rendering time so I can understand if there are more performing solutions

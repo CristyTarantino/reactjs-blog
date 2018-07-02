@@ -5,6 +5,7 @@
   "homepage": "https://cristytarantino.github.io/ReactBlog",
   "dependencies": {
     "axios": "^0.17.1",
+    "history": "^4.7.2",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",

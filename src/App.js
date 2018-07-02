@@ -1,12 +1,9 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router} from 'react-router-dom';
-
 import Header from './layout/header';
 import Main from './layout/main';
 
 // Embedding Stylesheets In Your Main Component App
 import './App.css';
-
 /*
   App.js is a sample React component called “App” that we get for free when creating a new app.
   App.css stores styling targeting that component specifically.
@@ -14,12 +11,10 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <Router>
         <div className="App">
           <Header/>
           <Main/>
         </div>
-      </Router>
     )
   }
 }
