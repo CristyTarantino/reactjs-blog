@@ -1,0 +1,78 @@
+/*.App {*/
+  /*text-align: center;*/
+/*}*/
+
+/*.App-logo {*/
+  /*animation: App-logo-spin infinite 20s linear;*/
+  /*height: 80px;*/
+/*}*/
+
+/*.App-header {*/
+  /*background-color: #222;*/
+  /*height: 150px;*/
+  /*padding: 20px;*/
+  /*color: white;*/
+/*}*/
+
+/*.App-title {*/
+  /*font-size: 1.5em;*/
+/*}*/
+
+/*.App-intro {*/
+  /*font-size: large;*/
+/*}*/
+
+/*@keyframes App-logo-spin {*/
+  /*from { transform: rotate(0deg); }*/
+  /*to { transform: rotate(360deg); }*/
+/*}*/
+
+
+.article {
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+.article-body {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.article-title {
+  border-bottom: 3px solid #6ba2aa;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.article--picture-author {
+  border-bottom: 2px solid #6BA2AA;
+  color: #6BA2AA;
+  font-size: 16px;
+  padding: 0 20px 20px;
+  margin: 0 0 30px;
+  text-transform: uppercase;
+}
+
+.article--picture-img,
+.article--video-img {
+  width: 500px;
+  margin: auto;
+}
+
+.article--picture-img > img,
+.article--video-img > img {
+  max-width: 100%;
+}
+
+.cell {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.row {
+  background-color: #6ba2aa;
+  overflow: hidden;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
