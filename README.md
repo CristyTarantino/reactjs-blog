@@ -3,7 +3,7 @@
 This is a sample blog I used to get started with ReactJS. 
 It shows how to simply use the state, how to fork with forms and really basics ReactJS features.
 
-To view the end result visit https://cristytarantino.github.io/ReactBlog.
+To view the end result visit https://cristytarantino.github.io/reactjs-blog.
 
 N.B. The project is full of comments for my personal learning experience.
 
