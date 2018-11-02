@@ -2,7 +2,7 @@
   "name": "my-first-react-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://cristytarantino.github.io/ReactBlog",
+  "homepage": "https://github.com/CristyTarantino/reactjs-blog",
   "dependencies": {
     "axios": "0.17.1",
     "history": "4.7.2",
@@ -13,7 +13,8 @@
     "react-scripts": "1.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "security-check": "nsp check --preprocessor yarn --reporter table",
+    "start": "yarn run security-check && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
@@ -21,9 +22,11 @@
     "deploy": "gh-pages -d build"
   },
   "devDependencies": {
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
-    "gh-pages": "^1.2.0",
-    "react-test-renderer": "^16.2.0"
+    "enzyme": "~3.3.0",
+    "enzyme-adapter-react-16": "~1.1.1",
+    "gh-pages": "~1.2.0",
+    "nsp": "~3.2.1",
+    "nsp-preprocessor-yarn": "~1.1.2",
+    "react-test-renderer": "~16.2.0"
   }
 }
