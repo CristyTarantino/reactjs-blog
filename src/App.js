@@ -1,9 +1,15 @@
+// Embedding Stylesheets In Your Main Component App
+import './App.css';
+
 import React, {Component} from 'react';
 import Header from './layout/header';
 import Main from './layout/main';
 
-// Embedding Stylesheets In Your Main Component App
-import './App.css';
+import { Router } from 'react-router';
+import createHashHistory from 'history/createHashHistory';
+
+const hashHistory = createHashHistory({ basename: process.env.PUBLIC_URL });
+
 /*
   App.js is a sample React component called “App” that we get for free when creating a new app.
   App.css stores styling targeting that component specifically.
@@ -11,16 +17,17 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-        <div className="App">
-          <Header/>
-          <Main/>
-        </div>
+        <Router history={hashHistory}>
+          <div className="App">
+            <Header/>
+            <Main/>
+          </div>
+        </Router>
     )
   }
 }
 
 export default App
-
 
 /*
   Any functional components that we write need to return the JSX that tells React how to create the component.
